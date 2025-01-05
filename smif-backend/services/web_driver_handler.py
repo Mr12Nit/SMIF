@@ -25,7 +25,7 @@ class WebDriverHandler:
         """
         self.driver_path = driver_path
         self.profile_path = profile_path
-        self.logger = logger or logSetup.log("WebDriverHandler", "webdriverLog.txt")
+        self.logger = logger or logSetup.setup_logger("WebDriverHandler", "webdriverLog.txt")
 
     def create_webdriver(self, headless: bool = False):
         """

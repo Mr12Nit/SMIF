@@ -1,7 +1,7 @@
 import os
 import logSetup
 
-logger = logSetup.log("FileHandler", "fileHandlerLog.txt")
+logger = logSetup.setup_logger("FileHandler", "fileHandlerLog.txt")
 
 class FileHandler:
     @staticmethod

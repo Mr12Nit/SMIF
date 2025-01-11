@@ -7,13 +7,9 @@ from models import *
 import json
 from services import web_driver_handler
 
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.common.action_chains import ActionChains
 import time
 from datetime import datetime 
+from services import logSetup
 
 
 
@@ -48,7 +44,7 @@ class XPath():
 
 class WhatsApp(Person,XPath):
     def __init__(self, phoneNumber=None, name=None, username=None):
-        self.logger = logger
+        self.logger = logger or logSetup.setup_logger("WhatsApp", "WhatsAppLog.txt")
         self.webdriverPath = webdriverPath
         self.profilePath = profilePath
         self.Xpath = XPath()

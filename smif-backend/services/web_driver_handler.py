@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
-import logSetup
+from services import logSetup
 
 
 class WebDriverHandler:
@@ -89,3 +89,5 @@ class WebDriverHandler:
         except Exception as e:
             self.logger.error(f"Error checking element: {e}")
         return False
+
+    

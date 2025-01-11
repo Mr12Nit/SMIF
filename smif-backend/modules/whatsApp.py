@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 
-import SharedMethods
+from services import sharedMethods
 from Person import *
 from models import *
 
 import json
+from services import web_driver_handler
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -701,3 +703,4 @@ class WhatsApp(Person,XPath):
 if __name__ == "__main__":
     print("hello")
     # storing about databse need to change
+    x = web_driver_handler.WebDriverHandler()
